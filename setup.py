@@ -43,7 +43,10 @@ if TORCH_AVAILABLE:
                 [
                     "autogptq_cuda/autogptq_cuda.cpp",
                     "autogptq_cuda/autogptq_cuda_kernel.cu"
-                ]
+                ],
+                extra_compile_args = {
+                    'nvcc': ['-O3']
+                }
             )
         ]
 
